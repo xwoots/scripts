@@ -1,5 +1,5 @@
 # scripts
-Some scripts &amp; other stuffs 
+Some scripts &amp; other stuff
 
 
  ___    ___ ___       __   ________  ________  _________   
