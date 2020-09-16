@@ -2,12 +2,12 @@
 
 import shutil, os, re
 
-os.chdir ('/home/mateuw/rutorrent/downloads/completed/Animes/My Hero Academia S04')
+os.chdir ('/path/to/directory')
 
-list = os.listdir('/home/mateuw/rutorrent/downloads/completed/Animes/My Hero Academia S04')
+list = os.listdir('/path/to/directory/')
 
 for filename in list:
-    dst = re.sub('S4 - ', 'S04E', filename)
+    dst = re.sub('to_replace', 'replacement', filename)
     src = filename 
     os.rename(src, dst)
 
