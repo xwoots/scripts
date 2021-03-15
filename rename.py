@@ -2,12 +2,18 @@
 
 import shutil, os, re
 
-os.chdir ('/path/to/directory')
+path = input("Enter the path where the script will run : ")
 
-list = os.listdir('/path/to/directory/')
+toreplace = input("Enter the pattern to replace : ")
+
+replacement = input("Enter the replacement pattern : ")
+
+os.chdir (path)
+
+list = os.listdir(path)
 
 for filename in list:
-    dst = re.sub('pattern_to_replace', 'replacement_pattern', filename)
+    dst = re.sub(toreplace, replacement, filename)
     src = filename 
     os.rename(src, dst)
 
