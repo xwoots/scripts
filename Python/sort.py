@@ -45,11 +45,11 @@ username = os.getenv('USER')
 if file_type == "1":
     for filename in list:
         if filename.endswith(pictures_ext):
-            shutil.move(filename, f'/home/{username}/Pictures')
+            shutil.move(filename, f'/home/{username}/Images')
 if file_type == "2":
     for filename in list:
         if filename.endswith(videos_ext):
-            shutil.move(filename, f'/home/{username}/Videos')
+            shutil.move(filename, f'/home/{username}/Vidéos')
 if file_type == "3":
     for filename in list:
         if filename.endswith(texts_ext):
@@ -57,7 +57,7 @@ if file_type == "3":
 if file_type == "4":
     for filename in list:
         if filename.endswith(musics_ext):
-            shutil.move(filename, f'/home/{username}/Music')
+            shutil.move(filename, f'/home/{username}/Musique')
 if file_type == "5":
     for filename in list:
         if filename.endswith(torrents_ext):
@@ -73,16 +73,16 @@ if file_type == "7":
 if file_type == "8":
     for filename in list:
         if filename.endswith(pictures_ext):
-            shutil.move(filename, f'/home/{username}/Pictures')
+            shutil.move(filename, f'/home/{username}/Images')
     for filename in list:
         if filename.endswith(videos_ext):
-            shutil.move(filename, f'/home/{username}/Videos')
+            shutil.move(filename, f'/home/{username}/Vidéos')
     for filename in list:
         if filename.endswith(texts_ext):
             shutil.move(filename, f'/home/{username}/Documents')
     for filename in list:
         if filename.endswith(musics_ext):
-            shutil.move(filename, f'/home/{username}/Music')
+            shutil.move(filename, f'/home/{username}/Musique')
     for filename in list:
         if filename.endswith(torrents_ext):
             shutil.move(filename, f'/home/{username}/Torrents')
