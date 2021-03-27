@@ -2,7 +2,7 @@
 
 import shutil, os, re
 
-pictures_ext = ("png", "jpg", "jpeg", "gelif", "webp")
+pictures_ext = ("png", "jpg", "jpeg", "gif", "webp")
 videos_ext = ("mp4", "mkv", "webm")
 texts_ext = (".pdf", ".odt", ".doc", ".docx")
 musics_ext = ("mp3", "flac", ".wav")
