@@ -37,3 +37,8 @@ for filename in list:
 	elif filename.endswith(scripts_ext):
 		shutil.move(filename, f'/home/{username}/Scripts')
 
+try: 
+	shutil.move(filename, '/home/{}/Images'.format(username))
+except: 
+	print("Le fichier {} existe déjà".format(filename))
+
