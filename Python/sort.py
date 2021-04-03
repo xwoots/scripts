@@ -10,7 +10,7 @@ torrents_ext = "torrent"
 ISOs_ext = ".iso"
 scripts_ext = (".sh", ".py")
 
-path = input("Enter the path where the script will run : ")
+path = input("Entrez le chemin où le script s'exécutera : ")
 os.chdir(path)
 list = os.listdir(os.getcwd())
 username = os.getenv('USER')
