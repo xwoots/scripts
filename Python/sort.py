@@ -15,9 +15,12 @@ os.chdir(path)
 list = os.listdir(os.getcwd())
 username = os.getenv('USER')
 
+# --------------------------------------------------------------------------
+
 def move_file(dir):
 	global username
 	global path
+	
 	try:
 		shutil.move(filename, f'/home/{username}/{dir}')
 	except shutil.Error:
@@ -25,6 +28,8 @@ def move_file(dir):
 		rem_file = input("Supprimer le fichier ? [y/N] ")
 		if rem_file == "y":
 			os.remove(f'{path}/{filename}')
+
+# --------------------------------------------------------------------------
 
 for filename in list:
 	if filename.endswith(pictures_ext):
