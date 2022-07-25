@@ -32,7 +32,7 @@ then
     ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
     # Add plugins and theme to .zshrc
-    sed -i 's/(git)/(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions sudo)/g' ~/.zshrc
+    sed -i 's/(git)/(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions sudo colored-man-pages)/g' ~/.zshrc
     sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
 
     source ~/.zshrc
