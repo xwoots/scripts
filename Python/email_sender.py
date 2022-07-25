@@ -2,9 +2,12 @@ import os
 from email.message import EmailMessage
 import ssl
 import smtplib
+from dotenv import load_dotenv
+
+load_dotenv()
 
 sender_address = 'aws.mateuwc@gmail.com'
-email_password = 'mixaqezatgovylqd'
+email_password = os.environ.get('emailPassword')
 receiver_address = 'aws.mcoulibaly@gmail.com'
 
 subject = 'Email from Python'
