@@ -2,13 +2,14 @@
 
 import shutil, os, re
 
-pictures_ext = ("png", "jpg", "jpeg", "gif", "webp")
-videos_ext = ("mp4", "mkv", "webm")
+pictures_ext = (".png", ".jpg", ".jpeg", ".gif", ".webp")
+videos_ext = (".mp4", ".mkv", ".webm")
 texts_ext = (".pdf", ".odt", ".doc", ".docx")
-musics_ext = ("mp3", "flac", ".wav")
-torrents_ext = "torrent"
+musics_ext = (".mp3", ".flac", ".wav")
+torrents_ext = ".torrent"
 ISOs_ext = ".iso"
-scripts_ext = (".sh", ".py")
+scripts_ext = (".sh", ".py", ".ps1")
+data_ext = (".csv", ".json", ".xml", ".xlsx". ".xls", ".ods")
 
 path = input("Entrez le chemin où le script s'exécutera : ")
 os.chdir(path)
