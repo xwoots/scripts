@@ -31,9 +31,23 @@ then
     git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
     ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
+    # Install zsh-history-enquirer
+    mkdir ~/.npm-global
+    npm config set prefix '~/.npm-global'
+    echo "export PATH=~/.npm-global/bin:$PATH" >> ~/.profile
+    source ~/.profile
+    npm i -g zsh-history-enquirer
+
     # Add plugins and theme to .zshrc
     sed -i 's/(git)/(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions sudo colored-man-pages)/g' ~/.zshrc
     sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
+
+    # Install zsh-history-enquirer
+    mkdir ~/.npm-global
+    npm config set prefix '~/.npm-global'
+    echo "export PATH=~/.npm-global/bin:$PATH" >> ~/.profile
+    source ~/.profile
+    npm i -g zsh-history-enquirer
 
     source ~/.zshrc
 
@@ -44,7 +58,7 @@ fi
 
 # Install commons
 apt update -qq
-apt install -qq -y curl zsh git
+apt install -qq -y curl zsh git npm
 
 # Change default shell
 read -p "Enter yout username : " USER_NAME
