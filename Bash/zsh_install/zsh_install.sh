@@ -40,7 +40,7 @@ then
 
     # Add plugins and theme to .zshrc
     sed -i 's/(git)/(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions sudo colored-man-pages)/g' ~/.zshrc
-    sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
+    sed -i 's/robbyrussell/cypher/g' ~/.zshrc
 
     # Install zsh-history-enquirer
     mkdir ~/.npm-global
