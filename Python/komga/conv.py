@@ -58,7 +58,7 @@ def to_jpg():
 			print(f'CBZ file exist : {filename}')
 		else: 
 			subprocess.run([f'unzip \"{filename}\"'], shell=True)
-			shutil.rmtree(filename)
+			os.remove(filename)
 			print(f'{filename} has been removed')
 
 choice = input("Choisissez l'action à exécuter :\n\n 1. Créer une archive .cbz à partir d'un dossier\n 2. Extraire le contenu d'une archive .cbz\n\nVeuillez entrer votre choix [1-2] : ")
