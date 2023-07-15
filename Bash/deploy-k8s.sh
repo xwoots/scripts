@@ -21,7 +21,7 @@ sudo hostnamectl set-hostname $selected_hostname
 
 # Populate Hosts file
 sudo tee -a /etc/hosts <<EOF
-$controller_ip  k8s-control
+$controller_ip  k8s-ctrl
 $worker1_ip  k8s-worker1
 $worker2_ip  k8s-worker2
 EOF
@@ -67,7 +67,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 
 hn=`hostname`
-if [ $hn == 'k8s-control' ]
+if [ $hn == 'k8s-ctrl' ]
 then
     # Initialize the cluster and set up kubectl access
     sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.24.0
