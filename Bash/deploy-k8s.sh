@@ -79,7 +79,7 @@ then
     kubectl get nodes
 
     # Install the Calico network add-on.
-    kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+    kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
 
     # Print the join command
     echo $'\nHere is the command for joining the cluser :'
