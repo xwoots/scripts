@@ -21,9 +21,9 @@ sudo hostnamectl set-hostname $selected_hostname
 
 # Populate Hosts file
 sudo tee -a /etc/hosts <<EOF
-$controller_ip  k8s-ctrl
-$worker1_ip  k8s-worker1
-$worker2_ip  k8s-worker2
+$controller_ip  kctrl
+$worker1_ip  kworker1
+$worker2_ip  kworker2
 EOF
 
 # Load kernel modules and modify systems settings for containerd
