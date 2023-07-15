@@ -67,7 +67,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 
 hn=`hostname`
-if [ $hn == 'k8s-ctrl' ]
+if [ $hn == 'kctrl' ]
 then
     # Initialize the cluster and set up kubectl access
     sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.24.0
