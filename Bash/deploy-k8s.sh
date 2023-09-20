@@ -79,7 +79,14 @@ then
     kubectl get nodes
 
     # Install the Calico network add-on.
-    kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
+    
+    # kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml -O
+
+    kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/tigera-operator.yaml
+    curl https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/custom-resources.yaml -O
+    kubectl create -f custom-resources.yaml
+    sleep 40s
+    kubectl get pods -n calico-system
 
     # Print the join command
     echo $'\nHere is the command for joining the cluser :'
