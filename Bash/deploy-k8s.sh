@@ -21,9 +21,9 @@ sudo hostnamectl set-hostname $selected_hostname
 
 # Populate Hosts file
 sudo tee -a /etc/hosts <<EOF
-$controller_ip  kctrl
-$worker1_ip  kworker1
-$worker2_ip  kworker2
+$controller_ip  kctrl2
+$worker1_ip  kworker3
+$worker2_ip  kworker4
 EOF
 
 # Load kernel modules and modify systems settings for containerd
@@ -67,7 +67,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 
 hn=`hostname`
-if [ $hn == 'kctrl' ]
+if [ $hn == 'kctrl2' ]
 then
     # Initialize the cluster and set up kubectl access
     sudo kubeadm init --pod-network-cidr 172.16.0.0/16
